@@ -32,13 +32,13 @@
 
 # About 🚀
 
-The Royal Reserve Bank is a digital banking solution that utilizes a microservices architecture. It incorporates the latest Spring Boot and Spring Cloud technologies to implement a range of architectural patterns such as service discovery, centralized configuration, distributed tracing, circuit breaker, cache-aside or event-driven architecture.
+This  is a digital banking solution that utilizes a microservices architecture. It incorporates the latest Spring Boot and Spring Cloud technologies to implement a range of architectural patterns such as service discovery, centralized configuration, distributed tracing, circuit breaker, cache-aside or event-driven architecture.
 <p>
 It consists of several independent modules that work together to provide a scalable and fault-tolerant system. The modules communicate with each other through well-defined APIs and leverage databases for data storage to perform various banking activities, such as account creation, money transfers, asset management and sending email or SMS notifications.
 
 # Solution Architecture 🔍
 
-The Royal Reserve Bank project is designed using a microservices architecture, which structures the application as a collection of loosely coupled services. Each service represents a specific business capability and can be developed and scaled independently.
+This project is designed using a microservices architecture, which structures the application as a collection of loosely coupled services. Each service represents a specific business capability and can be developed and scaled independently.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./docs/readme-assets/high-level-architecture-dark.png">
@@ -93,7 +93,7 @@ The key architectural patterns used in the project include:
 ### To build the applications:
 
 - Start the config-server application.
-- Start the supporting services in Docker using Docker Compose by running the command `docker-compose docker-compose-infrastructure-services.yml up -d`.
+- Start the supporting services in Docker using Docker Compose by running the command `docker-compose -f docker-compose-infrastructure-services.yml up -d`.
 - Open a terminal or command prompt and navigate to the project's root directory.
 - Run the command `mvn clean install -pl !config-server` to build all the applications.
 - To build a specific application, run the command `mvn clean install -pl <module-name>`. For example, to build the Account API, run the command `mvn clean install -pl account-api`.

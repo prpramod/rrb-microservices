@@ -24,12 +24,11 @@
         <jwks-rsa.version>0.22.0</jwks-rsa.version>
         <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
     </properties>
-
     <modules>
+        <module>account-api</module>
         <module>config-server</module>
         <module>discovery-server</module>
         <module>api-gateway</module>
-        <module>account-api</module>
         <module>asset-management-api</module>
         <module>transaction-api</module>
         <module>notification-api</module>

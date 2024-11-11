@@ -106,8 +106,8 @@ services:
     volumes:
       - ./data/grafana:/var/lib/grafana
     environment:
-      gf_security_admin_user: admin
-      gf_security_admin_password: password
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: password
     #note: dashboard id: 11378
 
   notification-api:

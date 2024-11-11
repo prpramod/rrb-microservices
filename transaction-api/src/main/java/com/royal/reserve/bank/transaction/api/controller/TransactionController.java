@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 
 /**
  * Controller class that handles HTTP requests related to transactions.
@@ -38,6 +39,19 @@ public class TransactionController {
         log.info("Transaction processed.");
         return CompletableFuture.supplyAsync(() -> transactionService.processTransaction(transactionRequest));
     }
+   /*
+    public CompletableFuture<String> processTransactionv2(@RequestBody TransactionRequest transactionRequest) {
+        return CompletableFuture.supplyAsync(() -> {
+            log.info("Processing transaction...");
+            String result = transactionService.processTransaction(transactionRequest);
+            log.info("Transaction processed successfully.");
+            return result;
+        }).exceptionally(ex -> {
+            log.error("Error processing transaction", ex);
+            throw new CompletionException(ex);
+        });
+    }
+    */
 
     /**
      *
